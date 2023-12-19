@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_margin="3dp"
+    android:background="@drawable/card_background"
+    android:clickable="true"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:id="@+id/full"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="3dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/iconTextView"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:maxLength="1"
+            android:shadowColor="@color/text_shadow"
+            android:shadowDx="7"
+            android:shadowDy="7"
+            android:shadowRadius="4"
+            android:text="Fi"
+            android:textColor="#F7F7F8"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivImage"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/facebook"
+            android:visibility="visible"
+            app:strokeWidth="1dp" />
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="3dp"
+            android:layout_margin="1dp" />
+
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textSize="12dp"
+            android:layout_toRightOf="@id/iconTextView"
+            android:gravity="center"
+            android:text="Link Title" />
+
+        <TextView
+            android:id="@+id/textWebsite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text="प्रश्न यहां लिखा होगा"
+            android:textColor="@color/black"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/textType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iconTextView"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text="उत्तर यहां होगा"
+            android:textColor="#E91E63"
+            android:textSize="14dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

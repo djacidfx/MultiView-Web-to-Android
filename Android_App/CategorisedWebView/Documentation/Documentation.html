@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://127.0.0.1:8000/#publishing-app -->
+<html lang="en" style="scroll-padding-top: 76px;"><script id="allow-copy_script">(function agent() {
+    let unlock = false
+    document.addEventListener('allow_copy', (event) => {
+      unlock = event.detail.unlock
+    })
+
+    const copyEvents = [
+      'copy',
+      'cut',
+      'contextmenu',
+      'selectstart',
+      'mousedown',
+      'mouseup',
+      'mousemove',
+      'keydown',
+      'keypress',
+      'keyup',
+    ]
+    const rejectOtherHandlers = (e) => {
+      if (unlock) {
+        e.stopPropagation()
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation()
+      }
+    }
+    copyEvents.forEach((evt) => {
+      document.documentElement.addEventListener(evt, rejectOtherHandlers, {
+        capture: true,
+      })
+    })
+  })()</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        <link rel="canonical" href="http://127.0.0.1:8000/">
+        <link rel="shortcut icon" href="http://127.0.0.1:8000/img/favicon.ico">
+        <title>WebView Documentation</title>
+        <link href="./WebView Documentation_files/bootstrap.min.css" rel="stylesheet">
+        <link href="./WebView Documentation_files/font-awesome.min.css" rel="stylesheet">
+        <link href="./WebView Documentation_files/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="./WebView Documentation_files/github.min.css">
+
+        <script src="./WebView Documentation_files/jquery-1.10.2.min.js.download" defer=""></script>
+        <script src="./WebView Documentation_files/bootstrap.min.js.download" defer=""></script>
+        <script src="./WebView Documentation_files/highlight.min.js.download"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    <style type="text/css">#_copy{align-items:center;background:#4494d5;border-radius:3px;color:#fff;cursor:pointer;display:flex;font-size:13px;height:30px;justify-content:center;position:absolute;width:60px;z-index:1000}#select-tooltip,#sfModal,.modal-backdrop,div[id^=reader-helper]{display:none!important}.modal-open{overflow:auto!important}._sf_adjust_body{padding-right:0!important}.super_copy_btns_div{position:fixed;width:154px;left:10px;top:45%;background:#e7f1ff;border:2px solid #4595d5;font-weight:600;border-radius:2px;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;z-index:5000}.super_copy_btns_logo{width:100%;background:#4595d5;text-align:center;font-size:12px;color:#e7f1ff;line-height:30px;height:30px}.super_copy_btns_btn{display:block;width:128px;height:28px;background:#7f5711;border-radius:4px;color:#fff;font-size:12px;border:0;outline:0;margin:8px auto;font-weight:700;cursor:pointer;opacity:.9}.super_copy_btns_btn:hover{opacity:.8}.super_copy_btns_btn:active{opacity:1}</style></head>
+
+    <body class="homepage" style="">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary" style="">
+            <div class="container">
+                <a class="navbar-brand" href="http://127.0.0.1:8000/">WebView Documentation</a>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="http://127.0.0.1:8000/#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary" style="top: 76px;">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="http://127.0.0.1:8000/#welcome-to-categorized-webview" class="nav-link active">Welcome to Categorized WebView</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="http://127.0.0.1:8000/#downloading-and-installing-android-studio" class="nav-link">Downloading and Installing Android Studio</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="http://127.0.0.1:8000/#importing-project-into-android-studio" class="nav-link">Importing Project into Android Studio</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="http://127.0.0.1:8000/#changing-app-name-and-package-name" class="nav-link">Changing App Name and Package Name</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="http://127.0.0.1:8000/#change-app-colors" class="nav-link">Change App Colors</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="http://127.0.0.1:8000/#change-app-icon" class="nav-link">Change App Icon</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="http://127.0.0.1:8000/#change-app-splash-screen" class="nav-link">Change App Splash Screen</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="http://127.0.0.1:8000/#adding-fan-and-admob-ads" class="nav-link">Adding FAN and Admob Ads</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="http://127.0.0.1:8000/#adding-changing-api-url" class="nav-link">Adding / Changing API URL</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="http://127.0.0.1:8000/#publishing-app" class="nav-link">Publishing App</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="welcome-to-categorized-webview">Welcome to Categorized WebView</h2>
+<hr>
+
+<p>Categorised WebView - Web to Android app has ability to convert a website into an Advanced Android app in just a few minutes by adding URL into Backend and then it will be live. This WebView android app can be managed by a powerful PHP Admin Panel where you can put multiple URLs in a Single app and also you can categorised URL by there usage. Categories WebView - Web to Android app has many features like live geolocation, Downloading and uploading files, JavaScript enabled, Dedicated Desktop mode to see full size website in your Android devices a list of features are available below...</p>
+<p><img alt="Screenshot" src="./WebView Documentation_files/Featured_Image.jpg"></p>
+<p><strong>Features of Categorised WebView App</strong></p>
+<ul>
+    <li>Easy to reskin with step by step documentation available with this code</li>
+    <li>No coding or programming knowledge required</li>
+    <li>Easy to Change colors</li>
+    <li>Support Multiple URLs Adding features</li>
+    <li>Admin Can add or Change URLs remotely without updating app source code</li>
+    <li>Notification feature to get updated users</li>
+    <li>Facebook Audience Network and Admob Ads</li>
+    <li>Downloading and uploading file feature available</li>
+    <li>Geo Location feature available</li>
+    <li>Easy to setup Admin Panel in any type of hosting</li>
+    <li>Music and Video file playing feature available</li>
+    <li>Dark and light mode available</li>
+    <li>Calling feature available if website have any mobile number</li>
+    <li>Swipe to reload feature available</li>
+    <li>Admin can add website with featured option or without featured option</li>
+    <li>SMS, Email, Dialer, Facebook Messenger Feature available</li>
+</ul>
+
+<p><strong>How to use Categorised WebView App</strong></p>
+<p>Using Categorised WebVeiw app - Web to Android app is very easy and simple just install Admin panel in any type of web hosting and then add API URL into app source code and then you are ready to go, after building r generating app bundle or APK you can able to add website URLs into Admin panel. All  the URLs will be store in the Admin panel where admin can change or update URLs remotely without changing app source code. Admin can also add own ads in this app.</p>
+<h2 id="downloading-and-installing-android-studio">Downloading and Installing Android Studio</h2>
+<hr>
+
+<p>First of all you need to download and install Android Studio. You can download it from <a href="https://developer.android.com/studio/">here</a>. After downloading you need to install it. You can follow the steps below to install it.</p>
+<p><strong>Windows</strong></p>
+<p>To install Android Studio on Windows, follow these steps:</p>
+<p>If you downloaded an .exe file (recommended), double-click to launch it.</p>
+<p>If you downloaded a .zip file:</p>
+<p>Unpack the .zip.
+Copy the android-studio folder into your Program Files folder.
+Open the android-studio &gt; bin folder.
+Launch studio64.exe (for 64-bit machines) or studio.exe (for 32-bit machines).
+Follow the Setup Wizard in Android Studio and install any recommended SDK packages.
+As new tools and other APIs become available, Android Studio notifies you with a pop-up.
+To manually check for updates, click Help &gt; Check for Update. check the below screen shot for reference.</p>
+<p><img alt="Screenshot" src="./WebView Documentation_files/android_studio_download.jpg"></p>
+<p><strong>Mac OS</strong></p>
+<p>To install Android Studio on your Mac, follow these steps:</p>
+<p>Launch the Android Studio DMG file.
+Drag and drop Android Studio into the Applications folder, then launch Android Studio.
+Choose whether to import previous Android Studio settings, then click OK.
+Complete the Android Studio Setup Wizard, which includes downloading the Android
+SDK components that are required for development.</p>
+<h2 id="importing-project-into-android-studio">Importing Project into Android Studio</h2>
+<hr>
+
+<p>First of all you need to extract the downloaded zip file. After extracting you will get a folder named "CategorizedWebView". Open Android Studio and click on "Open an existing Android Studio project" and select the "CategorizedWebView" folder. After selecting the folder Android Studio will start importing the project. After importing the project you will get a screen like this. Now you are ready to go. You can start editing the project. You can also check the below screenshots for reference.</p>
+<p><img alt="Screenshot" src="./WebView Documentation_files/import_project.jpg"></p>
+<h2 id="changing-app-name-and-package-name">Changing App Name and Package Name</h2>
+<hr>
+
+<p>To change the app name and package name you need to open the file named "strings.xml" under values directory and then you need to change the value of the string named "app_name". You can check the below screenshot for reference.</p>
+<pre><code class="hljs cpp">&lt;<span class="hljs-built_in">string</span> name=<span class="hljs-string">"app_name"</span>&gt;WebView App&lt;/<span class="hljs-built_in">string</span>&gt;
+</code></pre>
+<p><img alt="Screenshot" src="./WebView Documentation_files/change_app_name.jpg"></p>
+<p>For changing the package name you need to go to project panel and then click on Settings icon. Here you need to click on Tree Appearance and then you need to uncheck Compact Middle Packages. After that you need to click on Project and then you need to click on Project Structure. And then select package name which you want to rename now you need to right click on the directory then refactor and then rename, now click on All Directories. You can check the below screenshots for reference.</p>
+<p><img alt="Screenshot" src="./WebView Documentation_files/change_package_one.jpg"></p>
+<pre><code class="hljs apache"><span class="hljs-attribute">Package</span> Name &gt; Refatcor &gt; Rename &gt; <span class="hljs-literal">All</span> Directories
+</code></pre>
+<p><img alt="Screenshot" src="./WebView Documentation_files/change_package_two.jpg"></p>
+<p>After doing this you need to open App (Module) level build.gradle file and then you need to change the value of applicationId and namespace. You can check the below screenshot for reference.</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">applicationId</span> "<span class="hljs-selector-tag">com</span><span class="hljs-selector-class">.yourdomain</span><span class="hljs-selector-class">.categorizedwebview</span>"
+<span class="hljs-selector-tag">namespace</span> "<span class="hljs-selector-tag">com</span><span class="hljs-selector-class">.yourdomain</span><span class="hljs-selector-class">.categorizedwebview</span>"
+</code></pre>
+<p><img alt="Screenshot" src="./WebView Documentation_files/change_package_three.jpg"></p>
+<h2 id="change-app-colors">Change App Colors</h2>
+<hr>
+
+<p>To change the app colors you need to open the file named "colors.xml" under values directory and then you need to change the value of the color named "colorPrimary". You can check the below screenshot for reference.</p>
+<pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">color</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"colorPrimary"</span>&gt;</span>#3F51B5<span class="hljs-tag">&lt;/<span class="hljs-name">color</span>&gt;</span>
+</code></pre>
+<p><img alt="Screenshot" src="./WebView Documentation_files/changing_colors.jpg"></p>
+<h2 id="change-app-icon">Change App Icon</h2>
+<hr>
+
+<p>To change the app icon you need to open the file named "ic_launcher.png" under mipmap directory and then you need to replace the icon with your own icon. You can also generate your own icon by right click on app in the project panel and then click on New &gt; Image Asset. You can check the below screenshot for reference.</p>
+<p><img alt="Screenshot" src="./WebView Documentation_files/change_app_icon.jpg"></p>
+<h2 id="change-app-splash-screen">Change App Splash Screen</h2>
+<hr>
+
+<p>To Change the app splash screen you need to open activity_splash_screen.xml file under layout directory and then you need to replace the image with your own image. You can check the below screenshot for reference.</p>
+<p><img alt="Screenshot" src="./WebView Documentation_files/change_splash_screen.jpg"></p>
+<h2 id="adding-fan-and-admob-ads">Adding FAN and Admob Ads</h2>
+<hr>
+
+<p>To change or add your Facebook Audience network or Admob ad unit you need to open string.xml file and then you need to change the value of the string named.</p>
+<pre><code class="hljs xml"><span class="hljs-comment">&lt;!-- Facebook Ad Setup --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">string</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"fb_banner"</span>&gt;</span>439286564215107_439286920881738<span class="hljs-tag">&lt;/<span class="hljs-name">string</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">string</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"fb_interstitial"</span>&gt;</span>439286564215107_439287050881725<span class="hljs-tag">&lt;/<span class="hljs-name">string</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">string</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"medium_rectangle"</span>&gt;</span>439286564215107_439287294215034<span class="hljs-tag">&lt;/<span class="hljs-name">string</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">string</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"fb_native_banner"</span>&gt;</span>439286564215107_439287547548342<span class="hljs-tag">&lt;/<span class="hljs-name">string</span>&gt;</span>
+</code></pre>
+<p>You can check the below screenshot for reference.</p>
+<p><img alt="Screenshot" src="./WebView Documentation_files/change_ads.jpg"></p>
+<h2 id="adding-changing-api-url">Adding / Changing API URL</h2>
+<hr>
+
+<p>To add API URL you need to open the file named string.xml and then you need to change the value of the string named "AdminPanel". You can check the below screenshot for reference.</p>
+<pre><code class="hljs cpp">&lt;<span class="hljs-built_in">string</span> name=<span class="hljs-string">"AdminPanel"</span>&gt;https:<span class="hljs-comment">//demos.probweb.com/webview_admin/&lt;/string&gt;</span>
+</code></pre>
+<p><img alt="Screenshot" src="./WebView Documentation_files/change_api_url.jpg"></p>
+<h2 id="publishing-app">Publishing App</h2>
+<hr>
+<pre><code class="hljs coffeescript">You can make google search about <span class="hljs-built_in">this</span> topic. There are many tutorials available <span class="hljs-literal">on</span> the internet.
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="./WebView Documentation_files/base.js.download" defer=""></script>
+        <script src="./WebView Documentation_files/main.js.download" defer=""></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"><p>No results found</p></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+var livereload = function(epoch, requestId) {
+    var req = new XMLHttpRequest();
+    req.onloadend = function() {
+        if (parseFloat(this.responseText) > epoch) {
+            location.reload();
+            return;
+        }
+        var launchNext = livereload.bind(this, epoch, requestId);
+        if (this.status === 200) {
+            launchNext();
+        } else {
+            setTimeout(launchNext, 3000);
+        }
+    };
+    req.open("GET", "/livereload/" + epoch + "/" + requestId);
+    req.send();
+
+    console.log('Enabled live reload');
+}
+livereload(216724781, 216724937);
+</script>
+
+
+
+<div id="torrent-scanner-popup" style="display: none;"></div></body></html>

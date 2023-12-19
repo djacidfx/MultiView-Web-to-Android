@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">WebView App</string>
+
+    <string name="tag_line">Make your own app now!</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="AdminPanel">https://demos.probweb.com/webview_admin/</string>
+
+    <!-- Facebook Ad Setup -->
+    <string name="fb_banner">IMG_16_9_APP_INSTALL#YOUR_PLACEMENT_ID</string>
+    <string name="fb_interstitial">IMG_16_9_APP_INSTALL#YOUR_PLACEMENT_ID</string>
+    <string name="medium_rectangle">IMG_16_9_APP_INSTALL#YOUR_PLACEMENT_ID</string>
+    <string name="fb_native_banner">IMG_16_9_APP_INSTALL#YOUR_PLACEMENT_ID</string>
+
+    <string name="nointernet">Error in Loading questions...</string>
+    <string name="noconnection">The Questions not downloaded because of low internet connectivity. Retry after some time.</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <!--Navigation Bar Menus -->
+    <string name="shareMenu">Share</string>
+    <string name="moreappMenu">More Apps</string>
+    <string name="rateusMenu">Rate</string>
+    <string name="privacyMenu">Privacy Policy</string>
+    <string name="aboutMenu">About</string>
+
+    <string name="features">Features</string>
+    <string name="support">Support</string>
+
+    <string name="our_products">Our Products</string>
+    <string name="about">About Us</string>
+    <string name="contact">Contact Us</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="tabSelectedColor">#FF0000</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

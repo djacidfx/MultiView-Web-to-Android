@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="profile_pic_upload_option">
+        <item>Gallery</item>
+        <item>Camera</item>
+    </string-array>
+    <string-array name="spinner_list_item_array">
+
+        <item>Hindi</item>
+        <item>English</item>
+
+    </string-array>
+</resources>
